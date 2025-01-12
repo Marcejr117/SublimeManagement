@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72b7f522-02e5-433f-a248-94419d309e0a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     producto.`ref` AS producto_ref,
+     producto.`nombre` AS producto_nombre,
+     producto.`pvp` AS producto_pvp,
+     producto.`cantidad` AS producto_cantidad
+FROM
+     `producto` producto]]>
+	</queryString>
+	<field name="producto_ref" class="java.lang.String"/>
+	<field name="producto_nombre" class="java.lang.String"/>
+	<field name="producto_pvp" class="java.lang.String"/>
+	<field name="producto_cantidad" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="60" uuid="7f66d841-1f1d-48a6-9c02-eff180e81fc9"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="20"/>
+				</textElement>
+				<text><![CDATA[Proporción de productos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="214" height="20" forecolor="#666666" uuid="b592bbbd-476c-4caf-b243-a6ac0e084f14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Porcentaje de cada producto sobre el total]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="455" y="15" width="100" height="20" forecolor="#666666" uuid="9770efcd-db07-4cb9-a67c-11b7705847ed"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="355" y="15" width="100" height="20" forecolor="#666666" uuid="e72e0ea7-effc-4a80-8078-24f633802fa7"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha de impresión:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="338" splitType="Stretch">
+			<pieChart>
+				<chart theme="default">
+					<reportElement mode="Transparent" x="0" y="0" width="555" height="338" uuid="cca7f418-afe9-4e27-a612-6972ac9c25af"/>
+					<chartTitle position="Top" color="#333333"/>
+					<chartSubtitle/>
+					<chartLegend position="Top"/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{producto_nombre}]]></keyExpression>
+					<valueExpression><![CDATA[Integer.valueOf($F{producto_cantidad})]]></valueExpression>
+				</pieDataset>
+				<piePlot isCircular="true" labelFormat="{1}, {0}" legendLabelFormat="{2}">
+					<plot labelRotation="0.0"/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>

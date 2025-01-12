@@ -1,0 +1,66 @@
+Política de privacidad
+Última actualización: 11 de marzo de 2022
+
+Esta Política de privacidad describe Nuestras políticas y procedimientos sobre la recopilación, el uso y la divulgación de Su información cuando utiliza el Servicio y le informa sobre Sus derechos de privacidad y cómo la ley lo protege.
+
+Usamos sus datos personales para proporcionar y mejorar el Servicio. Al usar el Servicio, acepta la recopilación y el uso de información de acuerdo con esta Política de privacidad. Esta Política de privacidad se ha creado con la ayuda de la Plantilla de política de privacidad.
+
+Interpretación y Definiciones
+Interpretación
+Las palabras cuya letra inicial está en mayúscula tienen significados definidos bajo las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de que aparezcan en singular o en plural.
+
+Definiciones
+A los efectos de esta Política de Privacidad:
+
+Cuenta significa una cuenta única creada para que Usted acceda a nuestro Servicio o partes de nuestro Servicio.
+
+Empresa (referida como "la Empresa", "Nosotros", "Nos" o "Nuestro" en este Acuerdo) se refiere a Mi Compañia, carretera de jaén.
+
+Las cookies son pequeños archivos que un sitio web coloca en su computadora, dispositivo móvil o cualquier otro dispositivo, y que contienen los detalles de su historial de navegación en ese sitio web entre sus muchos usos.
+
+País se refiere a: España
+
+Dispositivo significa cualquier dispositivo que pueda acceder al Servicio, como una computadora, un teléfono celular o una tableta digital.
+
+Los datos personales son cualquier información que se relaciona con un individuo identificado o identificable.
+
+Servicio se refiere al sitio web.
+
+Proveedor de servicios significa cualquier persona física o jurídica que procesa los datos en nombre de la Compañía. Se refiere a empresas de terceros o personas empleadas por la Empresa para facilitar el Servicio, proporcionar el Servicio en nombre de la Empresa, realizar servicios relacionados con el Servicio o ayudar a la Empresa a analizar cómo se utiliza el Servicio.
+
+Los Datos de uso se refieren a los datos recopilados automáticamente, ya sea generados por el uso del Servicio o por la propia infraestructura del Servicio (por ejemplo, la duración de una visita a la página).
+
+El sitio web se refiere a performarce, accesible desde www.performarce.com
+
+Usted se refiere a la persona que accede o utiliza el Servicio, o la empresa u otra entidad legal en nombre de la cual dicha persona accede o utiliza el Servicio, según corresponda.
+
+Recopilación y uso de sus datos personales
+Tipos de datos recopilados
+Información personal
+Mientras usa Nuestro Servicio, podemos pedirle que nos proporcione cierta información de identificación personal que se puede usar para contactarlo o identificarlo. La información de identificación personal puede incluir, entre otros:
+
+Dirección de correo electrónico
+
+Nombre y apellido
+
+Número de teléfono
+
+Dirección, estado, provincia, código postal, ciudad
+
+Datos de uso
+
+Datos de uso
+Los Datos de uso se recopilan automáticamente cuando se utiliza el Servicio.
+
+Los datos de uso pueden incluir información como la dirección del protocolo de Internet de su dispositivo (por ejemplo, la dirección IP), el tipo de navegador, la versión del navegador, las páginas de nuestro Servicio que visita, la hora y la fecha de su visita, el tiempo dedicado a esas páginas, dispositivo único identificadores y otros datos de diagnóstico.
+
+Cuando accede al Servicio a través de un dispositivo móvil, podemos recopilar cierta información automáticamente, que incluye, entre otros, el tipo de dispositivo móvil que utiliza, la identificación única de su dispositivo móvil, la dirección IP de su dispositivo móvil, su sistema operativo, el tipo de navegador de Internet móvil que utiliza, identificadores únicos de dispositivos y otros datos de diagnóstico.
+
+También podemos recopilar información que su navegador envía cada vez que visita nuestro Servicio o cuando accede al Servicio a través de un dispositivo móvil.
+
+Tecnologías de seguimiento y cookies
+Usamos Cookies y tecnologías de seguimiento similares para rastrear la actividad en Nuestro Servicio y almacenar cierta información. Las tecnologías de seguimiento utilizadas son balizas, etiquetas y scripts para recopilar y rastrear información y para mejorar y analizar Nuestro Servicio. Las tecnologías que utilizamos pueden incluir:
+
+Cookies o Cookies del Navegador. Una cookie es un pequeño archivo que se coloca en su dispositivo. Puede indicar a su navegador que rechace todas las cookies o que indique cuándo se envía una cookie. Sin embargo, si no acepta las Cookies, es posible que no pueda utilizar algunas partes de nuestro Servicio. A menos que haya ajustado la configuración de su navegador para que rechace las Cookies, nuestro Servicio puede usar Cookies.
+Cookies Flash. Ciertas características de nuestro Servicio pueden usar objetos almacenados localmente (o Flash Cookies) para recopilar y almacenar información sobre Sus preferencias o Su actividad en nuestro Servicio. Las cookies de Flash no se gestionan con la misma configuración del navegador que las utilizadas para las cookies del navegador. Para obtener más información sobre cómo puede eliminar las cookies de Flash, lea "¿Dónde puedo cambiar la configuración para deshabilitar o eliminar objetos locales compartidos?" disponible en https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
+Balizas web. Ciertas secciones de nuestro Servicio y nuestros correos electrónicos pueden contener pequeños archivos electrónicos conocidos.

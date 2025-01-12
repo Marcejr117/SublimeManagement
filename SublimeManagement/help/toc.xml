@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<toc version="1.0">
+    <tocitem text="Inicio" target="aplicacion"/>
+    <tocitem text="Uso Genenal" target="uso_general"/>
+    <tocitem text="Cuentas" target="cuenta"/>
+    <tocitem text="Almacen" target="almacen"/>
+    <tocitem text="Calendario" target="calendario"/>
+    <tocitem text="Barra de herramientas" target="Barra_Herramientas"/>
+    
+</toc>

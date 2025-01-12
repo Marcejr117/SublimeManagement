@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2_subreport1" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7e2f7547-93a6-4cef-9426-9796f8aa4086">
+	<property name="ireport.zoom" value="2.1435888100000016"/>
+	<property name="ireport.x" value="35"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="aabf1cd1-e92c-4f84-9672-d0bb00caf583"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cliente.`id` AS cliente_id,
+     cliente.`nombre` AS cliente_nombre,
+     cliente.`apellido` AS cliente_apellido,
+     cliente.`dni` AS cliente_dni,
+     cliente.`telefono` AS cliente_telefono,
+     cliente.`mail` AS cliente_mail,
+     cliente.`localidad` AS cliente_localidad,
+     cliente.`direccion` AS cliente_direccion,
+     cliente.`proveedor` AS cliente_proveedor
+FROM
+     `cliente` cliente]]>
+	</queryString>
+	<field name="cliente_id" class="java.lang.String"/>
+	<field name="cliente_nombre" class="java.lang.String"/>
+	<field name="cliente_apellido" class="java.lang.String"/>
+	<field name="cliente_dni" class="java.lang.String"/>
+	<field name="cliente_telefono" class="java.lang.String"/>
+	<field name="cliente_mail" class="java.lang.String"/>
+	<field name="cliente_localidad" class="java.lang.String"/>
+	<field name="cliente_direccion" class="java.lang.String"/>
+	<field name="cliente_proveedor" class="java.lang.Boolean"/>
+	<variable name="nRegistro" class="java.lang.String" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{cliente_id}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="198" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="5" y="36" width="540" height="157" uuid="0b1d4ec5-9ad1-48e4-9a3c-3bba54ed9dca"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="16" width="50" height="20" uuid="0f0cbe7d-0d70-46f3-a906-f2459ba983d3"/>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="16" width="81" height="20" forecolor="#666666" uuid="a03898ca-a500-4e54-bc2d-1d4e568ec81b"/>
+				<textFieldExpression><![CDATA[$V{nRegistro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="38" width="17" height="20" uuid="b7dfd74e-568a-4ced-84e8-cd3781ef1b76"/>
+				<text><![CDATA[ID: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="58" width="100" height="20" uuid="8e09a963-750a-46d9-807f-4658a38733e0"/>
+				<textFieldExpression><![CDATA[$F{cliente_apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="58" width="100" height="20" uuid="c106fd8c-7c74-4d90-8934-db8070983618"/>
+				<textFieldExpression><![CDATA[$F{cliente_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="98" width="100" height="20" uuid="ca52f43a-dee7-4f6b-801c-6e5af66796ba"/>
+				<textFieldExpression><![CDATA[$F{cliente_telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="38" width="100" height="20" uuid="f1b43fe0-4564-4a37-9050-f1228275fb7e"/>
+				<textFieldExpression><![CDATA[$F{cliente_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="98" width="49" height="20" uuid="61f1613f-175e-45ea-8eb9-294e41d67a73"/>
+				<text><![CDATA[Telefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="58" width="49" height="20" uuid="3412ebd6-4f08-47a1-aee1-1f4cf3612f6f"/>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="118" width="49" height="20" uuid="cc2632a4-8473-41a6-b1b3-a1517442498a"/>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="118" width="200" height="20" uuid="813f908f-54fc-4a9a-b525-5c065f70b4d6"/>
+				<textFieldExpression><![CDATA[$F{cliente_mail}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="78" width="30" height="20" uuid="e2276112-7689-46c8-991a-e4abe15ab67d"/>
+				<text><![CDATA[DNI:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="78" width="100" height="20" uuid="42001f07-5318-4139-a6ce-e3c866f61699"/>
+				<textFieldExpression><![CDATA[$F{cliente_dni}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="138" width="49" height="20" uuid="194199b2-b00d-4a58-9236-272fae68eb5f"/>
+				<text><![CDATA[Direccion:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="138" width="323" height="20" uuid="c9898c9b-cdb9-43d9-a5f8-e618798f1534"/>
+				<textFieldExpression><![CDATA[$F{cliente_direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="158" width="49" height="20" uuid="30844ceb-8831-4c88-bfa7-0a54da351cd7"/>
+				<text><![CDATA[Proveedor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="158" width="100" height="20" uuid="9bf407fd-d1b7-449a-9da2-11dc12058342">
+					<printWhenExpression><![CDATA[$F{cliente_proveedor} == false]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[Si]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="58" width="49" height="20" uuid="5fde6723-0a76-4675-9e66-6764e6afa3c4"/>
+				<text><![CDATA[Apellidos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="158" width="100" height="20" uuid="56b6691b-70ef-4df0-a375-33db5a900b37">
+					<printWhenExpression><![CDATA[$F{cliente_proveedor} == true]]></printWhenExpression>
+				</reportElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

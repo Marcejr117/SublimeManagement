@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="31df08ea-511a-42e5-9599-8c1a203e6fb4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\2DAMD\\Proyecto\\SublimeManagement\\src\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cliente.`id` AS cliente_id,
+     cliente.`nombre` AS cliente_nombre,
+     cliente.`apellido` AS cliente_apellido,
+     cliente.`dni` AS cliente_dni,
+     cliente.`telefono` AS cliente_telefono,
+     cliente.`mail` AS cliente_mail,
+     cliente.`localidad` AS cliente_localidad,
+     cliente.`direccion` AS cliente_direccion,
+     cliente.`proveedor` AS cliente_proveedor
+FROM
+     `cliente` cliente]]>
+	</queryString>
+	<field name="cliente_id" class="java.lang.String"/>
+	<field name="cliente_nombre" class="java.lang.String"/>
+	<field name="cliente_apellido" class="java.lang.String"/>
+	<field name="cliente_dni" class="java.lang.String"/>
+	<field name="cliente_telefono" class="java.lang.String"/>
+	<field name="cliente_mail" class="java.lang.String"/>
+	<field name="cliente_localidad" class="java.lang.String"/>
+	<field name="cliente_direccion" class="java.lang.String"/>
+	<field name="cliente_proveedor" class="java.lang.Boolean"/>
+	<variable name="TotalClientes" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{cliente_id}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="61" uuid="e29fdaa1-7086-45be-b7e5-b04470f2c62b"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Cambria" size="20"/>
+				</textElement>
+				<text><![CDATA[Resumen Clientes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="34" width="100" height="20" forecolor="#666666" uuid="2db116d4-0107-4346-9511-8956be2aa167"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="417" y="34" width="38" height="20" forecolor="#666666" uuid="e0970d09-56de-4523-a47e-0d9cce0273fb"/>
+				<text><![CDATA[N.Pag:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="78" y="34" width="100" height="20" forecolor="#666666" uuid="c247f64a-a4da-434e-ac9a-96b4a1f4ec2f"/>
+				<textFieldExpression><![CDATA[$V{TotalClientes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="34" width="79" height="20" forecolor="#666666" uuid="1ce293c9-8cd6-440a-8941-9dca72970577"/>
+				<text><![CDATA[Total Clientes: ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="105" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="200" height="100" uuid="0fbd834c-841a-4763-a904-0c4a9cb5856b"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["C:\\SublimeManagement\\src\\reportes\\" + "report2_subreport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

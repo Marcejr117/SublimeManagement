@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e65b882f-2b69-43dc-9104-993ab163d783">
+	<property name="ireport.zoom" value="3.1384283767210253"/>
+	<property name="ireport.x" value="105"/>
+	<property name="ireport.y" value="230"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     albaran.`ID` AS albaran_ID,
+     albaran.`refAlbaran` AS albaran_refAlbaran,
+     albaran.`producto` AS albaran_producto,
+     albaran.`cantidad` AS albaran_cantidad,
+     albaran.`precio` AS albaran_precio,
+     producto.`ref` AS producto_ref,
+     producto.`nombre` AS producto_nombre,
+     producto.`pvp` AS producto_pvp,
+     producto.`cantidad` AS producto_cantidad
+FROM
+     `producto` producto INNER JOIN `albaran` albaran ON producto.`ref` = albaran.`producto`]]>
+	</queryString>
+	<field name="albaran_ID" class="java.lang.Integer"/>
+	<field name="albaran_refAlbaran" class="java.lang.String"/>
+	<field name="albaran_producto" class="java.lang.String"/>
+	<field name="albaran_cantidad" class="java.lang.Integer"/>
+	<field name="albaran_precio" class="java.lang.Float"/>
+	<field name="producto_ref" class="java.lang.String"/>
+	<field name="producto_nombre" class="java.lang.String"/>
+	<field name="producto_pvp" class="java.lang.String"/>
+	<field name="producto_cantidad" class="java.lang.String"/>
+	<variable name="Total_albaran" class="java.lang.Float" resetType="Group" resetGroup="albaran_ID" calculation="Sum">
+		<variableExpression><![CDATA[$F{albaran_cantidad} * $F{albaran_precio}]]></variableExpression>
+	</variable>
+	<variable name="Total_Row" class="java.lang.Float" resetType="Group" resetGroup="albaran_ID">
+		<variableExpression><![CDATA[$F{albaran_cantidad} * $F{albaran_precio}]]></variableExpression>
+	</variable>
+	<group name="albaran_ID">
+		<groupExpression><![CDATA[$F{albaran_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<staticText>
+					<reportElement x="0" y="0" width="58" height="20" forecolor="#666666" uuid="14ceef49-9c3c-451e-80ba-bb60a8e0cc83"/>
+					<text><![CDATA[ID Albaran:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="15" y="29" width="93" height="20" uuid="e4e4def1-5669-439a-bc16-8da737d04a54"/>
+					<text><![CDATA[Referencia Albaran:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="233" y="30" width="81" height="20" uuid="9ddfe3bc-afc6-4b31-9ed0-3759d4e90875"/>
+					<text><![CDATA[Ref. Producto]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="328" y="29" width="51" height="20" uuid="1c895727-e06a-46ea-8c79-ad1c364e8fac"/>
+					<text><![CDATA[Unidades]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="402" y="29" width="57" height="20" uuid="5c57edeb-37cc-4478-a75a-d4b55ffc93fd"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Precio]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="58" y="0" width="72" height="20" forecolor="#666666" uuid="2aca481f-7c6a-4388-be6f-ed2211a4036e"/>
+					<textFieldExpression><![CDATA[$F{albaran_ID}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="108" y="29" width="100" height="20" forecolor="#666666" uuid="3db1e689-05b7-4199-8351-a6424b6938f9"/>
+					<textFieldExpression><![CDATA[$F{albaran_refAlbaran}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="498" y="29" width="47" height="20" uuid="d294203e-ccf4-41de-9ad0-f69fc5003e70"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Total]]></text>
+				</staticText>
+				<line>
+					<reportElement x="15" y="49" width="540" height="1" forecolor="#999999" uuid="2874fbaf-b718-44ba-ba5c-f42fafc7aa4a"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="27">
+				<rectangle>
+					<reportElement x="484" y="1" width="71" height="19" uuid="6674f132-bca3-45c2-a62d-88e007b20fbb"/>
+				</rectangle>
+				<line>
+					<reportElement x="0" y="19" width="471" height="1" uuid="b2d876e4-1cf7-44a7-869b-7cdcd940599b"/>
+				</line>
+				<staticText>
+					<reportElement x="544" y="0" width="11" height="20" uuid="aac17226-117b-486a-99c1-d2c730c6e9f4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[€]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="484" y="0" width="60" height="20" uuid="451ac290-a5ec-4a17-86cd-c457f3ae2b87"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$V{Total_albaran}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="albaran_producto">
+		<groupExpression><![CDATA[$F{albaran_producto}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="59" uuid="2f9c2d37-e4b2-44e5-97c8-6d1f7e5113f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="20"/>
+				</textElement>
+				<text><![CDATA[Listado de Albaranes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="233" y="2" width="81" height="20" uuid="31265bd7-9264-42d2-9c28-34a458487a01"/>
+				<textFieldExpression><![CDATA[$F{albaran_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="2" width="51" height="20" uuid="62358204-57b7-457f-8d73-9c29b55993e0"/>
+				<textFieldExpression><![CDATA[$F{albaran_cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="2" width="57" height="20" uuid="18e840a4-8b98-4487-8f62-a17ee6df8fee"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{albaran_precio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="2" width="11" height="20" uuid="316d54dd-ba2c-4f36-a92b-559684860a48"/>
+				<text><![CDATA[€]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="484" y="2" width="60" height="20" uuid="5a046fed-b708-45ee-8c32-41ae27e6c131"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{Total_Row}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="544" y="2" width="11" height="20" uuid="ee720e3a-dc51-4c94-af12-f462e0b8d664"/>
+				<text><![CDATA[€]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="39" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="34" width="100" height="20" uuid="be516270-dd34-403f-aa74-ddb592f4259d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

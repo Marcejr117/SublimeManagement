@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE index
+PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+"http://java.sun.com/products/javahelp/index_1_0.dtd">
+<index version="1.0">
+        <indexitem text="Inicio" target="aplicacion">
+        <indexitem text="Uso General" target="uso_general"/>
+        <indexitem text="Cuentas" target="cuenta"/>
+        <indexitem text="Almacen" target="almacen"/>
+        <indexitem text="Calendario" target="calendario"/>
+        <indexitem text="Barra de herramientas" target="Barra_Herramientas"/>
+        
+</index>

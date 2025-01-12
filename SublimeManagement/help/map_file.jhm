@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC '-//Sun Microsystems Inc.//DTD JavaHelp Map Version 2.0//EN' 'null'>
+
+<map version="1.0">
+    <mapID target="aplicacion" url="html/index.html"/>
+    <mapID target="uso_general" url="html/pagina1.html"/>
+    <mapID target="cuenta" url="html/pagina2.html"/>
+    <mapID target="almacen" url="html/pagina3.html"/>
+    <mapID target="calendario" url="html/pagina4.html"/>
+    <mapID target="Barra_Herramientas" url="html/pagina5.html"/>
+    
+</map>
