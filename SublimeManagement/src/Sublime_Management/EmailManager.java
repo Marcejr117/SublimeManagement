@@ -92,7 +92,7 @@ public class EmailManager {
 //        ApiClient defaultClient = Configuration.getDefaultApiClient();
 //        // Configure API key authorization: api-key
 //        ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("api-key");
-//        apiKey.setApiKey("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");
+//        apiKey.setApiKey("<<API_HERE>>");
 //
 //        try {
 //            ContactsApi api = new ContactsApi();
