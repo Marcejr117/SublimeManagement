@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ecc68b30-8f13-4a97-87c0-0776e7728820)# Credenciales por defecto
+# Credenciales por defecto
 Usuario: `admin@admin.com`, Contraseña: `admin`
 
 # Información
